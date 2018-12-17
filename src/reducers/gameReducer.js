@@ -1,5 +1,3 @@
-'use strict';
-
 const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
