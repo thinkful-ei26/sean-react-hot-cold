@@ -4,13 +4,10 @@ import TopNav from './top-nav';
 
 import './header.css';
 
-export default function Header(props) {
+export default function Header() {
   return (
     <header>
-      <TopNav
-        onGenerateAuralUpdate={() => props.onGenerateAuralUpdate()}
-        onRestartGame={() => props.onRestartGame()}
-      />
+      <TopNav />
       <h1>HOT or COLD</h1>
     </header>
   );

@@ -3,11 +3,11 @@ import React from 'react';
 import Feedback from './feedback';
 import GuessForm from './guess-form';
 
-export default function GuessSection(props) {
+export default function GuessSection() {
   return (
     <section aria-label="Guess section" aria-describedby="feedback">
       <Feedback />
-      <GuessForm onMakeGuess={guess => props.onMakeGuess(guess)} />
+      <GuessForm />
     </section>
   );
 }

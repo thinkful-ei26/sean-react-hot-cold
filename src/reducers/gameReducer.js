@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
@@ -8,10 +9,11 @@ const initialState = {
 const gameReducer = (state=initialState, action) => {
   switch (action.type) {
     case 'RESTARTGAME':
-      return initialState;
+      // return initialState;
+      return Object.assign({}, initialState, {correctAnswer: Math.floor(Math.random() * 100) + 1});
     case 'MAKEGUESS':
       const guess = parseInt(action.guess, 10);
-      if (isNaN(guess)) return Object.assign({}, state, {feedback: 'Please enter a valid number'})
+      if (isNaN(guess)) return Object.assign({}, state, {feedback: 'Please enter a valid number'});
       const difference = Math.abs(guess - state.correctAnswer);
       let feedback;
       if (difference >= 50) feedback = 'You\'re Ice Cold...';
