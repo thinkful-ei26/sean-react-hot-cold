@@ -7,7 +7,7 @@ const initialState = {
   correctAnswer: Math.floor(Math.random() * 100) + 1
 };
 
-export default gameReducer = (state=initialState, action) => {
+const gameReducer = (state=initialState, action) => {
   switch (action.type) {
     case 'RESTARTGAME':
       return initialState;
@@ -34,3 +34,4 @@ export default gameReducer = (state=initialState, action) => {
       return state;
   }
 };
+export default gameReducer;
